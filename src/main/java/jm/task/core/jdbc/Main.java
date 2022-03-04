@@ -12,7 +12,7 @@ import java.sql.*;
 public class Main {
 
     public static void main(String[] args) throws SQLException {
-        UserDao userService = new UserDaoJDBCImpl();
+        UserService userService = new UserServiceImpl();
         userService.createUsersTable();
         userService.saveUser("Dima","Pohlebaev", (byte) 24);
         userService.saveUser("Stas","Eremin", (byte) 23);
@@ -21,6 +21,7 @@ public class Main {
         userService.getAllUsers();
         userService.cleanUsersTable();
         userService.dropUsersTable();
+
 
 
 

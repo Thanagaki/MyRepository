@@ -11,6 +11,7 @@ public class Util {
 
     public static Connection getMySQLConnection() throws SQLException {
         Connection conn = DriverManager.getConnection(URL,USER,PASSWORD);
+        conn.setAutoCommit(false);
         return conn;
     }
 }
